@@ -1,0 +1,37 @@
+= wrapingr
+
+code :: https://github.com/kachick/wrapingr
+bugs :: https://github.com/kachick/wrapingr/issues
+
+== Description
+
+Wrapper for "ping -r" on Windows (Record Route)
+
+== Feutures
+
+* Auto logging the original output and csv summary.
+
+== Usage
+
+    > ruby wrapingr.rb [IP or Hostname] [interval_seconds<Float]>
+    
+    > ruby wrapingr.rb example.com 0.2
+
+== Requirements
+
+* Windows XP or later
+* Ruby 1.9.3 or later
+* striuct - 0.3.0
+
+== Installation
+
+1. gem install striuct
+2. put the "bin/wrapingr.rb" anywhere
+
+== License
+
+The zlib/libpng License
+
+Copyright (c) 2012 Kenichi Kamiya
+
+See the file LICENSE.txt for further details.
