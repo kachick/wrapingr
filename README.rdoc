@@ -13,9 +13,9 @@ Wrapper for "ping -r" on Windows (Record Route)
 
 == Usage
 
-    > ruby wrapingr.rb [IP or Hostname] [interval_seconds<Float]>
+    > ruby wrapingr [IP or Hostname] [interval_seconds<Float]>
     
-    > ruby wrapingr.rb example.com 0.2
+    > ruby wrapingr www.example.com 0.2
 
 == Requirements
 
