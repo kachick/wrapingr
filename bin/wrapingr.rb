@@ -40,7 +40,7 @@ module MSWindows
           define {|pr|
             source = str.dup
             source.slice!(/^Pinging.+:\n/)
-            pr.summary = source.slice!(/^((?:Reply|Request).+)\n/, 1)
+            pr.summary = source.slice!(/^((?:Reply|Request|Destination).+)\n/, 1)
             source.slice!(/\n+/)
             source.slice!(/^Ping statistics.*?\n/)
             
