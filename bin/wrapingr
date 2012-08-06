@@ -1,0 +1,14 @@
+# wrapingr
+#   Wrapper for "ping -r" on Windows XP/Vista
+# Copyright (C) 2012 Kenichi Kamiya
+# Usage: this.rb [IP or Hostname] [interval_seconds<Float]>
+
+$VERBOSE = true
+
+require_relative '../lib/wrapingr'
+
+unless (1..2).cover? ARGV.length
+  abort 'usage: this.rb [IP or Hostname] [interval_seconds<Float]>'
+end
+
+Wrapingr.run ARGV[0], (ARGV[1] ? Float(ARGV[1]) : 1.0)

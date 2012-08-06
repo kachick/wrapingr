@@ -1,5 +1,13 @@
+# pre-repos
+
 0.1.0
 https://gist.github.com/2766079
 
 0.2.0
 https://gist.github.com/2951633
+
+# History
+
+0.1.0 - first init
+0.2.0 - Modify the formats
+0.2.1 - Fix for "Destination host unreachable"
