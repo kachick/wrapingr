@@ -9,10 +9,10 @@ module Wrapingr
   
   CSV_OPTIONS = {
     write_headers: true,
-    headers: %w[Time Pass? RouteChanged? 1 2 3 4 5 6 7 8 9 Summary Rest]
+    headers: %w[Time Pass? RouteChanged? 1 2 3 4 5 6 7 8 9 RoundTrip(msec) Summary Rest]
   }.freeze
   
-  VERSION = '0.2.1'.freeze
+  VERSION = '0.2.2'.freeze
 
   # @param [String] dest_addr
   # @param [Numeric] interval
@@ -38,8 +38,8 @@ module Wrapingr
           loop do
             time, cmd_output = Time.now, `#{command}`
             ftime = ftime time
-            last = result = Ping::RecordRoute.parse cmd_output
-
+            last = result = MSWindows::Ping::RecordRoute.parse cmd_output
+            
             if result.pass?
               if last_passed
                 route_changed = (result.route != last_passed.route)
@@ -60,7 +60,7 @@ module Wrapingr
                  route_summaries[4..9].join(' -> ')
                  )
 
-            csv << [ftime, result.pass?, route_changed, *result.route, result.summary, result.rest]
+            csv << [ftime, result.pass?, route_changed, *result.route, result.round_trip_ave, result.summary, result.rest]
         
             sleep interval
           end
