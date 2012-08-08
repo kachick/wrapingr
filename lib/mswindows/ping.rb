@@ -10,6 +10,8 @@ module MSWindows
 
       class << self
         
+        # @param [String] str
+        # @return [RecordRoute]
         def parse(str)
           define {|pr|
             source = str.dup
@@ -49,6 +51,7 @@ module MSWindows
       member :rest, OR(nil, String)
       close_member
 
+      # @return [Array<String>]
       def hops
         1.upto(9).map{|n|self[:"route#{n}"]}
       end
