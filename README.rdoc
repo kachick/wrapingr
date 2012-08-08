@@ -26,7 +26,7 @@ Wrapper for "ping -r" on Windows (Record Route)
 == Installation
 
 1. gem install striuct
-2. put the "bin/wrapingr.rb" anywhere
+2. put this project-dir anywhere
 
 == License
 
