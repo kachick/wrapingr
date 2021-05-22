@@ -1,13 +1,14 @@
 = wrapingr
 
-code :: https://github.com/kachick/wrapingr
-bugs :: https://github.com/kachick/wrapingr/issues
+* <em><b>This repository is archived</b></em>
+* <em><b>No longer maintained</b></em>
+* <em><b>I didn't publish this project to https://rubygems.org as a gem</b></em>
 
 == Description
 
 Wrapper for "ping -r" on Windows (Record Route)
 
-== Feutures
+== Features
 
 * Auto logging the original output and csv summary.
 
